@@ -1,0 +1,559 @@
+:root {
+    --main-color: #F1FFFA;
+    --second-color: #CCFCCB;
+    --third-color: #96E6B3;
+    --four-color: #568259;
+    --five-color: #464E47;
+}
+
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: var(--five-color);
+}
+
+header {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1em 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 0 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px; /* Hauteur initiale */
+    background-image: url('./img/nav_background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: height 0.3s ease; /* Transition fluide pour la hauteur */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--third-color);
+}
+
+.portfolio-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.Projets {
+    margin: 0em auto;
+    padding: 1em;
+    background-color: #ccfccb99;
+    box-shadow: inset 0 15px 20px rgba(0, 0, 0, 0.15);
+    padding-bottom: 3em;
+}
+.Projets h3{
+    margin-top: 0;
+}
+
+.h2Projet {
+    font-size: 2em;
+    color: var(--four-color);
+    margin: 2em 0em 1em 0em;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--five-color);
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slider-item {
+    min-width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+
+}
+
+.slider img {
+    width: 70%;
+    max-height: 300px;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Effet zoom au survol */
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--five-color);
+    color: var(--main-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.fond-slider{
+    background-color: var(--maiin-color);
+}
+
+/* Media Queries améliorées */
+@media (max-width: 768px) {
+    .slider img {
+        width: 90%;
+        max-height: 250px;
+    }
+
+    .slider-arrow {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+
+
+
+form button {
+    background-color: var(--four-color);
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--five-color);
+}
+
+.APropos {
+    position: relative;
+    margin: 10em auto;
+    max-width: 900px;
+    padding: 2em;
+    color: var(--five-color);
+    font-size: 1.1em;
+    line-height: 1.6;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background-color: var(--main-color);
+}
+
+.APropos::before, .APropos::after {
+    content: '';
+    position: absolute;
+    background: var(--four-color);
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.2;
+
+}
+
+.APropos::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+}
+
+.APropos::after {
+    width: 300px;
+    height: 300px;
+    bottom: -100px;
+    right: -100px;
+}
+
+.APropos h2 {
+    font-size: 2em;
+    color: var(--four-color);
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.apropos-text p {
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: var(--four-color);
+    color: var(--main-color);
+    padding: 1.5em 0;
+    box-shadow: 0px -20px 20px 10px rgba(0, 0, 0, 0.15);
+}
+footer p {
+    margin: 0;
+    color: #F1FFFA;
+}
+
+
+.Contact {
+    color: var(--third-color);
+    padding: 3em 0 0 0;
+    position: relative; /* Utile si vous souhaitez ajouter des effets comme ::before ou ::after */
+    box-shadow: inset 0 15px 20px rgba(0, 0, 0, 0.15);
+
+}
+
+.contact-container {
+    margin: 0 auto 4em auto;
+    max-width: 800px; /* Limite la largeur des éléments internes */
+    padding: 1em;
+    text-align: center;
+}
+
+.Contact h2 {
+    font-size: 2.5em;
+    color: var(--four-color);
+    margin: 0;
+}
+
+.Contact a {
+    display: inline-block;
+    font-size: 1.2em;
+    color: var(--four-color);
+    text-decoration: underline;
+    margin: 0.5em 0em;
+}
+
+form input, form textarea, form button {
+    display: block;
+    width: 44em;
+    max-width: 600px; /* Limite la largeur des champs */
+    margin: 1em auto;
+    padding: 0.5em;
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
+    background-color: var(--second-color);
+}
+
+form button {
+    background-color: var(--four-color);
+    color: var(--main-color);
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 10em;
+}
+
+form button:hover {
+    background-color: var(--main-color);
+    color: var(--four-color);
+    border-color: 1px solid var(--four-color);
+}
+
+section {
+    scroll-margin-top: 80px; /* Ajustez à la hauteur de votre barre de navigation */
+}
+
+/* Style de la section "CompetencesBUT" */
+.CompetencesBUT {
+    padding: 2em;
+    background-color: var(--main-color);
+    border-radius: 8px;
+    box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.15);
+    margin: 0em auto;
+    text-align: center;
+}
+
+.CompetencesBUT h2 {
+    font-size: 2em;
+    color: var(--four-color);
+    margin-bottom: 1.5em;
+}
+
+/* Conteneur pour les cartes */
+.competences-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de tailles égales */
+    gap: 1em; /* Espacement entre les cartes */
+    margin: 2em auto; /* Centrage du conteneur */
+    max-width: 1200px; /* Largeur maximale pour éviter qu'il soit trop étendu */
+    padding: 1em;
+}
+
+.card {
+    background-color: var(--second-color);
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée */
+}
+
+.card h3 {
+    color: var(--four-color);
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: var(--five-color);
+}
+
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour tablettes */
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* 1 colonne pour mobiles */
+    }
+}
+
+
+.MesCompetences {
+    font-family: Arial, sans-serif;
+    padding: 2em;
+    background-color: #f8f9fa; /* Couleur de fond */
+    text-align: center;
+    box-shadow: 0 -15px 20px rgba(0, 0, 0, 0.15);
+}
+
+.MesCompetences h2 {
+    font-size: 2.2em;
+    color: var(--four-color);
+    margin-bottom: 1em;
+}
+
+.competences {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+    gap: 1.5em; /* Réduit l’espacement entre les blocs */
+    justify-content: center; /* Centrer les éléments */
+}
+
+.competence {
+    width: 250px; /* Réduit la largeur des blocs */
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Légèrement réduit le rayon des coins */
+    padding: 1em; /* Réduit le padding interne */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: solid 1px var(--four-color);
+}
+
+.competence:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.competence h3 {
+    font-size: 1.5em; /* Réduit la taille du titre */
+    color: var(--four-color);
+    margin-bottom: 0.8em; /* Réduit l’espacement sous le titre */
+}
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em; /* Réduit l’espacement entre les éléments */
+    justify-content: center;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px; /* Réduit la largeur de chaque élément */
+    text-align: center;
+}
+
+.tech-item img {
+    width: 50px; /* Réduit la taille des logos */
+    height: 50px; /* Assure une taille cohérente */
+    object-fit: contain;
+    margin-bottom: 0.3em; /* Réduit l’espacement sous le logo */
+}
+
+.tech-item p {
+    font-size: 0.9em; /* Réduit la taille du texte */
+    color: var(--five-color);
+}
+
+
+
+textarea {
+    font-family: Arial, sans-serif; /* Définit la même police que les autres éléments */
+    font-size: 16px; /* Ajuste la taille de la police */
+    color: var(--main-color); /* Harmonise la couleur du texte */
+    padding: 10px; /* Ajoute un espace intérieur pour le confort visuel */
+    border: 1px solid #ccc; /* Bordure discrète pour un design propre */
+    border-radius: 4px; /* Coins arrondis pour une meilleure intégration visuelle */
+    width: 100%; /* Assure que le textarea prend toute la largeur disponible */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+    background-color: #f9f9f9; /* Couleur de fond neutre */
+    resize: vertical; /* Permet uniquement un redimensionnement vertical */
+}
+
+textarea:focus {
+    outline: none; /* Supprime le contour par défaut */
+    border-color: var(--four-color); /* Change la bordure au focus */
+    box-shadow: 0 0 5px var(--four-color); /* Ajoute un effet de focus */
+}
+
+input:focus {
+    outline: none; /* Supprime le contour par défaut */
+    border-color: var(--four-color); /* Change la bordure au focus */
+    box-shadow: 0 0 5px var(--four-color); /* Ajoute un effet de focus */
+}  
+
+
+
+/** Gestion de la barre de navigation **/
+
+/* Masquer les liens de navigation sur petits écrans */
+@media (max-width: 1120px) {
+    .nav-links {
+        display: none; /* Cache les liens de navigation */
+    }
+
+    /* Style du menu burger */
+    .burger-menu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background-color: var(--four-color);
+        border-radius: 5px;
+        z-index: 2000;
+        cursor: pointer;
+    }
+
+    .burger-menu div {
+        width: 30px;
+        height: 4px;
+        background-color: var(--main-color);
+        margin: 6px auto;
+        transition: all 0.3s ease;
+    }
+
+    /* Menu déroulant activé */
+    .nav-active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--four-color);
+        z-index: 1000;
+        justify-content: center;
+    }
+
+    .nav-active li {
+        margin: 1em 0;
+    }
+
+    .nav-active a {
+        font-size: 1.5em;
+        color: var(--main-color);
+    }
+}
+
+/** Ajustement des champs de la section Contact **/
+
+/* Largeur des champs pour petits écrans */
+@media (max-width: 768px) {
+    form input, form textarea, form button {
+        width: 90%; /* Utilise 90% de la largeur de l'écran */
+    }
+}
+
+@media (max-width: 480px) {
+    form input, form textarea, form button {
+        width: 90%; /* Occupe toute la largeur pour très petits écrans */
+    }
+}
+ 
+
+
+.parcourA{
+    border: 2px solid var(--four-color);
+}
+
+.parcourA:hover{
+    border-bottom: 5px solid var(--four-color);
+}
